@@ -11,7 +11,7 @@ import { app, server } from "./socket/socket.js";
 import job from "./cron/cron.js";
 
 dotenv.config();
-
+console.log('Mongo URI:', process.env.MONGO_URI);
 connectDB();
 job.start();
 
